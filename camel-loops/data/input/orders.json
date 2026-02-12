@@ -1,0 +1,19 @@
+{
+  "orders": [
+    {
+      "id": 1,
+      "item": "Laptop",
+      "price": 1200.50
+    },
+    {
+      "id": 2,
+      "item": "Mouse",
+      "price": 25.99
+    },
+    {
+      "id": 3,
+      "item": "Keyboard",
+      "price": 75.00
+    }
+  ]
+}
