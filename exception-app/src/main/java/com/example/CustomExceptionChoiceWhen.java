@@ -11,7 +11,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 
-@Component
+//@Component
 public class CustomExceptionChoiceWhen extends RouteBuilder implements CommandLineRunner {
     private static final Logger log = LoggerFactory.getLogger(CustomExceptionUsingProcessMethod.class);
 

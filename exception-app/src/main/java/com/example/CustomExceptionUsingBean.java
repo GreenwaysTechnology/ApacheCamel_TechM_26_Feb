@@ -35,8 +35,6 @@ public class CustomExceptionUsingBean extends RouteBuilder implements CommandLin
                 .log(LoggingLevel.INFO, "Order validated Successfully")
                 .log(LoggingLevel.INFO, "Order Processed: ${body.id}")
                 .log(LoggingLevel.INFO, "Processing completed for Customer: ${body.customerId}");
-
-
     }
 
     @Override
