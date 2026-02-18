@@ -9,22 +9,22 @@ import java.util.Random;
 
 @Service("databaseService")
 public class DatabaseService {
-    private static final Logger log = LoggerFactory.getLogger(FileService.class);
-    Random random = new Random();
+
+    private static final Logger log = LoggerFactory.getLogger(DatabaseService.class);
+    private Random random = new Random();
 
     public void saveToDatabase(String data) throws DatabaseException {
-        log.info("Saving to  Database :{}", data);
-        //simulate RANDOM database EXception
+        log.info("Saving to database: {}", data);
+
+        // Simulate random database exception
         if (random.nextInt(3) == 0) {
-            throw new DatabaseException("Database Connection Failed");
+            throw new DatabaseException("Database connection failed");
         }
-        log.info("Data saved to database");
 
+        log.info("Data saved to database successfully");
     }
 
-    public void cleanUp(String content) {
-        log.info("Database cleanUp Performed");
-
+    public void cleanup() {
+        log.info("Database cleanup performed");
     }
-
 }

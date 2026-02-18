@@ -9,23 +9,24 @@ import java.util.Random;
 
 @Service("fileService")
 public class FileService {
+
     private static final Logger log = LoggerFactory.getLogger(FileService.class);
-    Random random = new Random();
+    private Random random = new Random();
 
     public String processFile(String fileName) throws IOException {
-        log.info("Processing File :{}", fileName);
-        //simulate RANDOM IO EXception
-        if (random.nextInt(3) == 0) {
-            throw new IOException("Failed to read file:" + fileName);
-        }
-        log.info("Processing File Completed:{}", fileName);
-        return "File Content from " + fileName;
+        log.info("Processing file: {}", fileName);
 
+        // Simulate random IO exception
+        if (random.nextInt(3) == 0) {
+            throw new IOException("Failed to read file: " + fileName);
+        }
+
+        log.info("File processed successfully: {}", fileName);
+        return "File content from: " + fileName;
     }
 
     public void saveToFile(String content) {
-        log.info("Saving Content to File :{}", content);
-
+        log.info("Saving content to file: {}", content);
     }
-
 }
+
