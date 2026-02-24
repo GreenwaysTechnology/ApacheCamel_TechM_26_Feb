@@ -1,0 +1,36 @@
+server:
+  port: 8080
+
+camel:
+  springboot:
+    name: CamelKafkaDemo
+    main-run-controller: true   # keeps app alive
+
+app:
+  kafka:
+    brokers: ${KAFKA_BROKERS:localhost:9092}
+    topics:
+      orders:        orders-topic
+      orders-dlq:    orders-dlq-topic
+      payments:      payments-topic
+      notifications: notifications-topic
+      audit:         audit-topic
+    consumer:
+      group-id:          camel-demo-group
+      auto-offset-reset: earliest
+      consumers-count:   2
+      max-poll-records:  100
+      auto-commit:       false
+    producer:
+      retries: 3
+      acks:    all
+
+logging:
+  level:
+    com.example.camelkafka: DEBUG
+    org.apache.camel: INFO
+
+spring:
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
