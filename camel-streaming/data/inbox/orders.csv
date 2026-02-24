@@ -1,0 +1,11 @@
+id,name,amount,status,email
+1,John Smith,150.00,pending,john@example.com
+2,Jane Doe,299.99,completed,jane@example.com
+3,Bob Johnson,75.50,pending,bob@example.com
+4,Alice Williams,512.00,completed,alice@example.com
+5,Charlie Brown,,pending,charlie@example.com
+6,Diana Prince,99.99,completed,diana@example.com
+7,INVALID LINE
+8,Eve Adams,200.00,cancelled,eve@example.com
+9,Frank Castle,350.75,pending,frank@example.com
+10,Grace Hopper,425.00,completed,grace@example.com
