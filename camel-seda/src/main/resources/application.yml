@@ -1,0 +1,9 @@
+server:
+  port: 8080
+camel:
+  springboot:
+    name: CamelSEDA-Demo
+logging:
+  level:
+    com.example: DEBUG
+    org.apache.camel: INFO
