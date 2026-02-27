@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+camel:
+  springboot:
+    name: CamelCircuitBreakerApp
+  servlet:
+    mapping:
+      context-path: /api/*
+
+# Resilience4j Circuit Breaker Config (optional - can also be done in Java DSL)
+resilience4j:
+  circuitbreaker:
+    instances:
+      myCircuitBreaker:
+        slidingWindowSize: 5
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10s
+        permittedNumberOfCallsInHalfOpenState: 2
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+
+# External service URL (mock/real)
+external:
+  service:
+    url: http://localhost:8080/unstable-service
